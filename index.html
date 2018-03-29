@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Simple Example</title>
+    <script src="bower_components/angular/angular.min.js"></script>
+  </head>
+  <body ng-app="myApp">
+      <div >
+      <p> Input something in the box</p>
+      Name: <input type="text" ng-model="name"/>
+      <p ng-bind="name"/>
+    </div>
+
+    <div>
+      <p> Addition: {{ 5 + 5 }}</p>
+    </div>
+
+     <div>
+      Name: <input type="text"  ng-model="name"/>
+      <p>{{name}}</p>
+    </div>
+
+    <div ng-controller="myCtrl">
+      Firstname : <input type="text" ng-model="firstname"/><br>
+      Lastname : <input type="text" ng-model="lastname"/><br>
+      FullName: {{firstname + " "+lastname}}
+    </div>
+    <script>
+    var app = angular.module('myApp',[])
+    app.controller('myCtrl',function($scope)
+    {
+      $scope.firstname ="madhuri";
+      $scope.lastname = "patil";
+    });
+    </script>
+
+    <div ng-init = "quantity=2;cost=1000">
+      <p>Total Cost is : {{quantity * cost}}</p>
+    </div>
+
+    <div ng-init="employee={firstName:'madhuri',lastName:'patil', salary:10000}">
+      <p>Employee details: {{employee.firstName + " " +employee.lastName + " " + employee.salary}}</p>
+    </div>
+
+    <div ng-init="array=[20,10,30,40,50]">
+      <p>The middle number of the array: {{array[2]}}
+    </div>
+
+    <div ng-controller="myCtrl">
+      <h2 ng-mousemove="count = count + 1"> Hello.....</h2>
+      <h2> {{count}} </h2>
+    </div>
+    <script>
+    var app = angular.module('myApp',[])
+    app.controller('myCtrl',function($scope)
+    {
+      $scope.count=0;
+    });
+  </script>
+  <div ng-controller="myCtrl">
+  <button ng-click="count= count+1"> OnClick </button>
+  <h2>{{count}}</h2>
+  </div>
+  <script>
+  var app = angular.module('myApp',[])
+  app.controller('myCtrl',function($scope)
+  {
+    $scope.count=0;
+  });
+  </script>
+
+  
+
+  </body>
+</html>

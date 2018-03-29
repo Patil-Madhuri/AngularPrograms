@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Javascript object basic</title>
+  </head>
+  <body>
+
+    <p>Creating a JavaScript Object.</p>
+
+    <p id="demo"></p>
+
+    <script>
+    var person = {
+        firstName : "Madhuri",
+        lastName  : "Patil",
+        age       : 23,
+        address   : "kamothe"
+    };
+
+    document.getElementById("demo").innerHTML =
+    person.firstName + " " + person.lastName + " "+person.age+" "+person.address;
+    </script>
+    <p id="demo1"></p>
+    <script>
+    var person = new Object();
+    person.firstName = "Madhuri";
+    person.lastName = "Chaudhari";
+    person.age = 23;
+    document.getElementById("demo1").innerHTML = person.firstName + " " + person.lastName + " " + person.age;
+    </script>
+
+    <script>
+    function emp(id,name,salary)
+    {
+      this.id = id;
+      this.name=name;
+      this.salary = salary;
+    }
+
+    e = new emp(1,"Madhuri",10000);
+    document.write(e.id+" "+e.name + " "+e.salary);
+    //convert to Uppercase
+    //     var message = "Hello...";
+    // var msg = message.toUpperCase();
+    // document.write("Uppercase: "+msg);
+
+    
+    </script>
+
+
+
+  </body>
+</html>
