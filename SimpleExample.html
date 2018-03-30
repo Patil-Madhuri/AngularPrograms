@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Simple Example</title>
+    <script src="bower_components/angular/angular.min.js"></script>
+  </head>
+  <body ng-app="myApp">
+      <div >
+      <p> Input something in the box</p>
+      Name: <input type="text" ng-model="name"/>
+      <p ng-bind="name"/>
+    </div>
+
+    <div>
+      <p> Addition: {{ 5 + 5 }}</p>
+    </div>
+
+    <div>
+      <p>Input two number</p>
+      A: <input type="number" ng-model="a"/>
+      B: <input type="number" ng-model="b"/>
+
+      <p>Addition using input: {{a + b}}</p>
+     <div>
+      Name: <input type="text"  ng-model="name"/>
+      <p>{{name}}</p>
+    </div>
+
+    <div ng-controller="myCtrl">
+      Firstname : <input type="text" ng-model="firstname"/><br>
+      Lastname : <input type="text" ng-model="lastname"/><br>
+      FullName: {{firstname + " "+lastname}}
+    </div>
+    <script>
+    var app = angular.module('myApp',[])
+    app.controller('myCtrl',function($scope)
+    {
+      $scope.firstname ="madhuri";
+      $scope.lastname = "patil";
+    });
+    </script>
+
+    <div ng-init = "quantity=2;cost=1000">
+      <p>Total Cost is : {{quantity * cost}}</p>
+    </div>
+
+    <div ng-init="employee={firstName:'madhuri',lastName:'patil', salary:10000}">
+      <p>Employee details: {{employee.firstName + " " +employee.lastName + " " + employee.salary}}</p>
+    </div>
+
+    <div ng-init="array=[20,10,30,40,50]">
+      <p>Array is: {{array}}
+      <p>The middle number of the array: {{array[2]}}
+    </div>
+
+    <div ng-controller="myCtrl">
+      <h2 ng-mousemove="count = count + 1"> Hello.....</h2>
+      <h2> {{count}} </h2>
+    </div>
+    <script>
+    var app = angular.module('myApp',[])
+    app.controller('myCtrl',function($scope)
+    {
+      $scope.count=0;
+    });
+  </script>
+
+  <div ng-controller="myCtrl">
+    <button ng-click="myFunction()">Click</button>
+    <div ng-show="showMe">
+      <h2>Menu</h1>
+        <p>Pizza</p>
+        <p>Pasta</p>
+        <p>Frankee</p>
+      </div>
+      <script>
+      var application = angular.module("myApp",[]);
+      application.controller("myCtrl",function($scope)
+      {
+      $scope.showMe = false;
+      $scope.myFunction= function(){
+          $scope.showMe = !$scope.showMe;
+      }
+      });
+      </script>
+      <p>Click the button to show/hide the menu.</p>
+
+      <form>
+        Name: <input type="text" ng-model="name">
+        Programming Languages:
+        <input type="radio" ng-model="lang" value="java">Java
+        <input type="radio" ng-model="lang" value="c++">C++
+        <input type="radio" ng-model="lang" value="javascript">javascript
+      </form>
+
+      <div ng-switch="lang">
+        <div ng-switch-when="java">
+          <h4>Java is object oriented Language<h4>
+            <p>Welcome to the world of the java</p>
+        </div>
+        <div ng-switch-when="c++">
+          <h4>C++ is purely object oriented Language<h4>
+            <p>Welcome to the world of the C++ </p>
+        </div>
+        <div ng-switch-when="javascript">
+          <h4>JavaScript is an object-based scripting language that is lightweight and cross-platform.</h4>
+          <p> Welcome to the world of the JavaScript</p>
+        </div>
+      </div>
+      <p>The ng-switch directive hides and shows HTML sections depending on the value of the radio buttons.</p>
+
+        <form>
+        Select Language:
+      <select ng-model="language">
+        <option value="">
+        <option value="java">Java
+        <option value ="c++">C++
+        <option value="javascript">JavaScript
+        </select>
+      </form>
+      <div ng-switch="language">
+        <div ng-switch-when="java">
+          <h4>Java is object oriented Language<h4>
+            <p>Welcome to the world of the java</p>
+        </div>
+        <div ng-switch-when="c++">
+          <h4>C++ is purely object oriented Language<h4>
+            <p>Welcome to the world of the C++ </p>
+        </div>
+        <div ng-switch-when="javascript">
+          <h4>JavaScript is an object-based scripting language that is lightweight and cross-platform.</h4>
+          <p> Welcome to the world of the JavaScript</p>
+        </div>
+      </div>
+  </body>
+</html>
