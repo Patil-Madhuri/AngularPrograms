@@ -1,0 +1,30 @@
+
+  {
+    "staffRecord":[
+  {
+    "name":"madhuri",
+    "age" : 23,
+    "address" : "kamothe",
+    "DOB" : "04/09/1994"
+  },
+  {
+    "name":"Paresh",
+    "age" : 27,
+    "address" : "kamothe",
+    "DOB" : "03/06/1990"
+  },
+  {
+    "name":"kirti",
+    "age" : 21,
+    "address" : "vashi",
+    "DOB" : "23/08/1996"
+  },
+  {
+    "name":"Preethi",
+    "age" : 21,
+    "address" : "kulaba",
+    "DOB" : "25/09/1996"
+  }
+
+]
+}
