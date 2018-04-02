@@ -1,4 +1,4 @@
-var app = angular.module('myApp');
+
 app.controller('registercontroller', function($scope)
 {
   $scope.name="";

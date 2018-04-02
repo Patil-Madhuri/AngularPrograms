@@ -1,0 +1,58 @@
+<style>
+        .calculator{
+            margin: 20px auto;
+            padding: 10px;
+            border: black solid 2px;
+            text-align: center;
+            width: 300px;
+            height: 405px;
+            background: lightblue;
+        }
+        .numfield{
+            margin: 10px auto;
+            width: 290px;
+            height: 30px;
+            border: black inset 1px;
+            font-family: "arial", serif;
+            font-size: 20px;
+            background: beige;
+        }
+        #result_field{
+            cursor: default;
+        }
+        .btn {
+            margin: 5px;
+            width: 138px;
+            height: 100px;
+            font-family: "arial", serif;
+            font-size: 50px;
+            border: black inset 1px;
+            background: lightgray;
+        }
+        hr {
+            border: none;
+            width: 290px;
+            height: 1px;
+            background-color: black;
+        }
+    </style>
+
+<body  ng-controller="calcCtrl">
+    <div class="calculator">
+        <input type="input" id="result_field" class="numfield" ng-model="result"/>
+        <hr>
+        <input type="input" class="numfield" ng-model="first" />
+        <input type="input" class="numfield" ng-model="second" />
+
+        <div>
+            <input type="button" value="+" class="btn" ng-click="add_func()" />
+            <input type="button" value="-" class="btn" ng-click="subt_func()" />
+        </div>
+
+        <div >
+            <input type="button" value="*" class="btn" ng-click="multi_func()" />
+            <input type="button" value="/" class="btn" ng-click="div_func()" />
+        </div>
+
+    </div>
+  </body>

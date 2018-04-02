@@ -14,6 +14,12 @@ app.config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRo
   url : '/login',
   templateUrl : 'templates/Login.html',
   controller : 'logincontroller'
-});
+})
+  .state('calculate',
+  {
+  url : '/calculate',
+  templateUrl : 'templates/Calculator.html',
+  controller : 'calcCtrl'
+  });
   $urlRouterProvider.otherwise('/register');
 }]);

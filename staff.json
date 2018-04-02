@@ -2,7 +2,7 @@
   {
     "staffRecord":[
   {
-    "name":"madhuri",
+    "name":"Madhuri",
     "age" : 23,
     "address" : "kamothe",
     "DOB" : "04/09/1994"
@@ -14,7 +14,7 @@
     "DOB" : "03/06/1990"
   },
   {
-    "name":"kirti",
+    "name":"Kirti",
     "age" : 21,
     "address" : "vashi",
     "DOB" : "23/08/1996"
@@ -24,6 +24,12 @@
     "age" : 21,
     "address" : "kulaba",
     "DOB" : "25/09/1996"
+  },
+  {
+    "name":"Rakesh",
+    "age" : 23,
+    "address" : "Koparkairne",
+    "DOB" : "06/06/1995"
   }
 
 ]

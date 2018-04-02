@@ -1,0 +1,32 @@
+<head>
+<script src="bower_components/angular/angular.min.js" charset="utf-8"></script>
+<script src="controllers/ValidationController.js" charset="utf-8"></script>
+</head>
+<body>
+<form  ng-app="myApp" name="validationform" ng-controller="validationcontroller" novalidate >
+<table align="center" border="2">
+  <h3 align="center"> Validation Example </h3>
+  <tr>
+    <td>  Username: </td>
+    <td>
+      <input type="text" name="username" ng-model="username" required>
+          <span style="color:red" ng-show="validationform.username.$error.required"> Username is required.
+      <span  ng-show="validationform.username.$dirty && validationform.username.$invalid">
+</span></span>
+    </td>
+  </tr>
+  <tr>
+    <td> Email : </td>
+    <td><input type="email" name="email" ng-model="email" required>
+      <span style="color:red" ng-show="validationform.email.$dirty && validationform.email.$invalid">
+        <span ng-show="validationform.email.$error.required">Email is required.</span>
+        <span ng-show="validationform.email.$error.email">Invalid email address.</span></span>
+  </tr>
+  <tr>
+    <td align="center" colspan="1">
+    <input type="submit" ng-disabled="validationform.username.$dirty && validationform.username.$invalid
+     || validationform.email.$dirty && validationform.email.$invalid" value="Submit" onsubmit="templates/Login.html"></td>
+  </tr>
+</table>
+</form>
+</body>

@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Reading json Data</title>
-    <script src="bower_components/angular/angular.min.js"></script>
+     <script src="bower_components/angular/angular.min.js"></script>
+    <script src="controllers/Staffcontroller.js"></script>
   </head>
   <body>
     <div ng-app= "myApp" ng-controller="staffcontroller">
@@ -15,27 +16,14 @@
           <th>Address </th>
           <th>DOB </th>
         </tr>
-        <tr ng-repeat = "x in staffdata">
-          <td>{{  x.name + "  "}} </td>
-          <td>{{ x.age + "  "}}</td>
-          <td>{{x.address + "  "}}</td>
-          <td>{{x.DOB }}</td>
+        <tr ng-repeat = "data in staffdata">
+          <td>{{ data.name + "  "}} </td>
+          <td>{{ data.age + "  "}}</td>
+          <td>{{data.address + "  "}}</td>
+          <td>{{data.DOB }}</td>
         </tr>
       </ul>
     </div>
 
-
-        <script>
-        var app=angular.module("myApp",[]);
-        app.controller('staffcontroller', function($scope, $http)
-        {
-          $http.get("staff.json").then(function(response)
-        {
-          $scope.staffdata = response.data.staffRecord;
-
-        });
-        });
-
-</script>
   </body>
 </html>
