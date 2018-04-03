@@ -20,6 +20,12 @@ app.config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRo
   url : '/calculate',
   templateUrl : 'templates/Calculator.html',
   controller : 'calcCtrl'
+  })
+  .state('readjson',
+  {
+  url : '/readjson',
+  templateUrl : 'templates/ReadJsonData.html',
+  controller : 'staffcontroller'
   });
   $urlRouterProvider.otherwise('/register');
 }]);

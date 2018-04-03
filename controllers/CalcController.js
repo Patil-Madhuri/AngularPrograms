@@ -1,4 +1,3 @@
-console.log("hiiii");
 app.controller("calcCtrl", function ($scope)
 {
     $scope.add_func = function add_func() {

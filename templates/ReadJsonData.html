@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Reading json Data</title>
-     <script src="bower_components/angular/angular.min.js"></script>
-    <script src="controllers/Staffcontroller.js"></script>
-  </head>
-  <body>
+
     <div ng-app= "myApp" ng-controller="staffcontroller">
       <table border="2" align="center">
         <caption>Staff.json File Data </caption>
@@ -16,7 +8,7 @@
           <th>Address </th>
           <th>DOB </th>
         </tr>
-        <tr ng-repeat = "data in staffdata">
+        <tr ng-repeat = "data in information">
           <td>{{ data.name + "  "}} </td>
           <td>{{ data.age + "  "}}</td>
           <td>{{data.address + "  "}}</td>
@@ -24,6 +16,3 @@
         </tr>
       </ul>
     </div>
-
-  </body>
-</html>
