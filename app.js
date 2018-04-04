@@ -26,6 +26,12 @@ app.config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRo
   url : '/readjson',
   templateUrl : 'templates/ReadJsonData.html',
   controller : 'staffcontroller'
+  })
+  .state('readjsonnested',
+  {
+  url : '/readjsonnested',
+  templateUrl : 'templates/ReadNestedObjetJson.html',
+  controller : 'readjsonCtrl'
   });
   $urlRouterProvider.otherwise('/register');
 }]);

@@ -1,0 +1,8 @@
+<div ng-controller="readjsonCtrl">
+    <ul>
+        <li ng-repeat="artist in artists">{{artist.name}}</li>
+    </ul>
+    <ul ng-repeat="artist in artists" ng-show="isVisible(artist.name)">
+        <li ng-repeat="album in artist.albums">{{album.title}}</li>
+    </ul>
+</div>
