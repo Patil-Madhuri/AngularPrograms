@@ -15,6 +15,13 @@ app.config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRo
   templateUrl : 'templates/Login.html',
   controller : 'logincontroller'
 })
+
+  .state('dashboard',
+{
+  url : '/dashboard',
+  templateUrl : 'templates/Dashboard.html',
+  controller : 'dashboardCtrl'
+})
   .state('calculate',
   {
   url : '/calculate',
