@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    font-family: "Times new roman";
+}
+
+.sidenav {
+    height: 100%;
+    width: 0px;
+    position: fixed;
+    background-color: red;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    font-size: 25px;
+    color: white;
+    transition: 0.3s;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+</style>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+
+  <a href="#">Contact</a>
+</div>
+
+<div id="main">
+  <span style="font-size:30px;cursor:pointer" onclick="toggle()">&#9776; Click Me!</span>
+</div>
+
+<script>
+ /* Open the sidenav */
+
+function toggle()
+{
+  if(document.getElementById("mySidenav").style.width=="0px")
+  {
+    openNav();
+  }
+  else {
+    closeNav();
+  }
+}
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+ /* close the sidenav */
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0px";
+    document.getElementById("main").style.marginLeft= "0px";
+}
+</script>
+
+</body>
+</html>

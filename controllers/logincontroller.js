@@ -9,7 +9,8 @@ app.controller('logincontroller', function($scope)
     }
     $scope.submit = function()
     {
-      console.log("Email: "+$scope.email);
-      console.log("Password: "+$scope.password);
+      //console.log("Email: "+$scope.email);
+    //  console.log("Password: "+$scope.password);
+  console.log("Hii ");
     };
 });

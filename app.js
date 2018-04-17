@@ -39,6 +39,13 @@ app.config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRo
   url : '/readjsonnested',
   templateUrl : 'templates/ReadNestedObjetJson.html',
   controller : 'readjsonCtrl'
+  })
+  .state('dialogue',
+  {
+  url : '/dialogue',
+  templateUrl : 'templates/DialogueBox.html',
+  controller : 'dialogCtrl'
   });
+
   $urlRouterProvider.otherwise('/register');
 }]);
